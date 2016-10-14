@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+		<script src="js/spectrum.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <link href="css/spectrum.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="fonts/font-awesome-4.6.3/css/font-awesome.min.css">
+        <title>Hello World</title>
+    </head>
+    <body>
+    	<div id="canvas-wrapper">
+        	<div id="spread-container"></div>
+            <div id="new-page-v"></div>
+            <div id="new-page-r"></div>
+           	<div id="old-page-v"></div>
+           	<div id="old-page-r"></div>
+            <canvas id="canvas" width="400px" height="257px"></canvas>
+        </div>
+        
+        <div id="toolbar">
+        	<table id="toolbar-container">
+            	<tr class="toolbar-top">
+                	<td id="trash"></td>
+                	<td id="eraser"></td>
+                	<td id="pencil"></td>
+                	<td id="marker"></td>
+                </tr>
+            	<tr class="toolbar-bottom">
+                	<td id="visibility"></td>
+                	<td id="sticky"></td>
+                	<td id="color-picker"><input type="text" id="colorPicker"/></td>
+                	<td id="weight">
+                        <div id="s-select">
+                            <div class="s-wrapper">
+                                <div id="stroke-1" data-stroke-weight="1"></div>
+                            </div>
+                            <div class="s-wrapper">
+                                <div id="stroke-2" data-stroke-weight="2"></div>
+                            </div>
+                            <div class="s-wrapper">
+                                <div id="stroke-5" data-stroke-weight="5"></div>
+                            </div>
+                            <div class="s-wrapper s-wrapper-last">
+                                <div id="stroke-10" data-stroke-weight="10"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="toolbar-controls">
+            	<div id="open-close-button"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+            </div>
+        </div>
+        <div id="bottom-controls">
+        	<div id="bc-container">
+            	<div id="bc-previous-page"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+            	<div id="bc-current-page">
+                	<p id="page-number-container"><span id="current-page" class="page-numbers">1</span>/<span id="total-page" class="page-numbers">1</span></p>
+                </div>
+            	<div id="bc-next-page"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+ // Wait for device API libraries to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // device APIs are available
+            //
+            </script>
+    </body>
+</html>

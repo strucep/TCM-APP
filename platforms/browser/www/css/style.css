@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/* CSS Document */
+html{
+	width:100%;
+	height:100%;
+}
+#canvas-wrapper{
+	width:600px;
+	height:325px;
+}
+canvas{
+	position:absolute;
+	top:0px;
+	left:50%;
+	margin-left:-35%;
+}
+#spread-container{
+	height:257px;
+	width:400px;
+	position:absolute;
+	top:0px;
+	left:50%;
+	margin-left:-35%;
+	background-image:url(../img/spread/bg_spread1.jpg);
+	background-size:contain;
+	background-repeat:no-repeat;
+}
+#toolbar td{
+	width:53.33px;
+	height:54px;
+	background-color:#999;
+	float:left;
+	margin-right:5px;
+	border-radius:8px;
+}
+#toolbar{
+	background-color:#0CF;
+	display:inline-block;
+	padding:5px;
+	position: absolute;
+    top: 50px;
+    left: -248px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.10);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.10);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.10);
+}
+#toolbar-container{
+	float:left;
+}
+#toolbar-controls{
+    width: 20px;
+    height: 118px;
+    float: left;
+}
+#open-close-button{
+	background-color: #fff;
+    width: 20px;
+    height: 20px;
+	position:relative;
+	top:50%;
+	margin-top:-10px;
+	font-size: 15px;
+	font-weight:bold;
+    text-align: center;
+	border-radius: 20px;
+}
+#toolbar td.selectedTool{
+	border:1px solid #000;
+	margin:-1px;
+	margin-right:4px;
+}
+#pencil{
+	background-image:url(../img/button_toolbar_pen.png);
+	background-size:cover;
+}
+#marker{
+	background-image:url(../img/button_toolbar_marker.png);
+	background-size:cover;
+}
+#eraser{
+	background-image:url(../img/button_toolbar_erase.png);
+	background-size:cover;
+}
+#trash{
+	background-image:url(../img/button_toolbar_eraseall.png);
+	background-size:cover;
+}
+#visibility{
+	background-image:url(../img/button_toolbar_show.png);
+	background-size:cover;
+}
+#sticky{
+	background-image:url(../img/button_toolbar_notes.png);
+	background-size:cover;
+}
+#weight{
+	background-image:url(../img/button_toolbar_lines.png);
+	background-size:cover;
+}
+[id^=stroke]{
+	width:100%;
+	height:1px;
+	background-color:#000;
+}
+.s-wrapper{
+	padding:2px;
+	margin-bottom:5px;
+}
+.s-wrapper-last{
+	margin-bottom:0px;
+}
+#stroke-1{
+	margin-top:0px;
+}
+#stroke-2{
+	height:2px;
+}
+#stroke-5{
+	height:5px;
+}
+#stroke-10{
+	height:10px;
+}
+#s-select{
+	display:none;
+	position:relative;
+	margin-top:0px;
+	width:85px;
+	height:auto;
+	padding:5px;
+	border:1px solid #000;
+	background-color:#fff;
+	border-radius:8px;
+	top:60px;
+    left:-20px;
+}
+.s-wrapper-active{
+	background-color:#0CF;
+}
+.sp-replacer{
+	height: 48px;
+    width: 46px;
+    margin-top: -1px;
+    margin-left: -1px;
+    border-radius: 8px;
+	border:none;
+	background-image:url(../img/button_toolbar_picker.png);
+	background-size:cover;
+}
+.sp-preview, .sp-dd{
+	margin-top:12px;
+	display:none
+}
+[class^=note-]{
+	width: 32px;
+    height: 32px;
+    position: absolute;
+	background-image:url(../img/text-note.png)
+}
+[class^=noteBox-]{
+	position: relative;
+    width: 180px;
+    padding: 10px;
+    background-color: #fff;
+    top: -60px;
+    left: -84px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    max-height: 150px;
+    overflow: scroll;
+}
+[class^=noteInput-]{
+	width: 98%;
+    height: 98%;
+	border:1px solid #ccc;
+}
+[class^=theText-]{
+	width: 98%;
+    max-height: 98%;
+	display:none;
+	margin:0;
+}
+#bottom-controls{
+	background-color:#0CF;
+	width:100%;
+	position:absolute;
+	left:0;
+	bottom:0;
+	text-align:center;
+}
+#bc-container{
+	display:inline-block;
+}
+#bc-container div{
+	display:inline-block;
+	position:relative;
+	top:4px;
+}
+#bc-container div i{
+	font-size:50px;
+}
+div#bc-current-page{
+	top:-10px;
+	width: 70px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 7px;
+	margin: 0 10px;
+}
+p#page-number-container{
+	position:relative;
+	top:6px;
+	font-size:25px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:none;
+	font-weight:bold;
+	margin:0;
+}
+div#new-page-v,div#new-page-r,div#old-page-v,div#old-page-r{
+	width:200px;
+	height:257px;
+	position:absolute;
+	visibility:hidden;
+}
+div#new-page-v{
+	left:474px;
+	top:0;
+	width:10px;
+	background-size:cover;
+}
+div#new-page-r{
+	left:484px;
+	width:10px;
+	background-size:cover;
+	background-position:right;
+}
+div#old-page-v{
+	left:95px;
+	width:10px;
+	background-size:cover;
+}
+div#old-page-r{
+	left:105px;
+	width:10px;
+	background-size:cover;
+	background-position:right;
+}
